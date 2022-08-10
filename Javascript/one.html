@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;
+        console.log(typeof a);
+
+        a=10;
+        console.log(typeof a);
+
+        a='Vaibhav';
+        console.log(typeof a);
+
+        a=true;
+        console.log(typeof a);
+        
+        console.log(10=='10');
+        console.log(10==='10');
+
+
+        //Logical AND operator
+        console.log(8==9 && 6==6);
+        console.log(8>=4 && 23);
+        
+        x='' && 'Vaibhav';
+        console.log(typeof x);
+
+
+        //Logical (OR) || operator
+        console.log(8==8 || 2==2);
+        
+
+
+
+
+        //Loop
+        for(var i=1;i<10;i++)
+        {
+            if(i%3==0)
+            {
+                console.log(i);
+            }
+        }
+
+
+        var h=900;
+        switch(h)
+        {
+            case 1:console.log("One");
+                    break;
+            case 900:console.log("Nine Hundred");
+                    break;
+            default:console.log("Invalid");
+        }
+
+
+
+
+        var a=10;
+        var b=20;
+        var add=a+b;
+        var prod=a*b;
+        document.write("addition"+(a+b));
+        //or
+        document.write("Addition"+add+ "Product"+prod);
+        //or
+        document.write(`Addition=${add}"+" Product=${prod}`);
+
+
+
+        //alert ,prompt,confirm
+
+        /*alert("Hello");
+        var b=prompt("Enter number");
+        document.write("square"+b*b);
+
+        var d=confirm("Do you want to continue");
+        alert(d);
+        */
+
+
+        //Convert ascii to char
+        for(var ch=65;ch<=90;ch++)
+        console.log(String.fromCharCode(ch));
+
+
+        //convert char to ascii
+        //for(var ch='a';ch<='z';ch++)
+        //console.log(String.ToCharC(ch));
+        
+
+
+        //Array
+        var x=[1,2,3,"Vaibhav",true,4];
+        console.log(x);
+
+        for(var i=x.length-1;i>=0;i--)
+        {
+            console.log(x[i]);
+        }
+
+//function  --two.html & PrimeNumber.html
+
+
+//var, let ,const 
+
+
+</script>
+
+</body>
+</html>
