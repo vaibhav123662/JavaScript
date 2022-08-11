@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script type="text/javascript">
+    function Add()
+    {
+
+    var name=document.sample.name.value;
+    var per=document.sample.per.value;
+
+    var tr=document.createElement('tr');
+
+    var td1=tr.appendChild(document.createElement('td'));
+    var td2=tr.appendChild(document.createElement('td'));
+
+    var td3=tr.appendChild(document.createElement('td'));
+
+    td1.innerHTML=name;
+    td2.innerHTML=per;  
+    td3.innerHTML='<input type="button" value="Delete" onclick="Del(this)">';
+
+    document.getElementById("tbl").appendChild(tr);
+    }
+
+    function Del(ABC)
+    {
+        var s=ABC.parentNode.parentNode;
+        s.parentNode.removeChild(s);
+    }
+</script>
+
+
+<style>
+    table,th,td
+    {
+       border: 1px solid black; 
+    }
+</style>
+</head>
+<body>
+    
+    <form action="" name="sample">
+        Enter Name : <input type="text" name="name"><br> <br>
+        Enter Percent : <input type="text" name="per"><br> <br>
+        
+        <input type="button" value="Add" onclick="Add()">
+
+        <hr><br>
+        <table id="tbl" class="table">
+            <th>Name</th>
+            <th>Percent</th>
+            <th>delete</th>            
+        </table>
+    </form>
+
+
+</body>
+</html>

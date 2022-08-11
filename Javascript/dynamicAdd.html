@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Add()
+        {
+
+            var fname=document.getElementById("t1").value;
+            var ul=document.getElementById("fruitlist");
+            var li=document.createElement('li');
+           // var textdata=document.createTextNode("")
+            li.innerHTML=fname;
+            ul.appendChild(li);
+        }
+
+    </script>
+</head>
+<body style="text-align: center;">
+    <form>
+       Add fruits : <input type="text" id="t1">
+<br><br>
+<input type="button" value="Add" onclick="Add()">
+<br> <br>
+
+<ul id="fruitlist">
+    <li>Mango</li>
+</ul>
+    </form>
+</body>
+</html>
