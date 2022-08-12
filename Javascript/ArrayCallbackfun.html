@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cube(a)
+        {
+            console.log("in cube"+a);
+            return a*a*a;
+        }
+
+        //map
+        var a=[1,2,3,4,5];
+        //a.map(callfunction)
+        //var a2=a.map(cube);
+        var a2=a.map(d=>d*d*d);
+        console.log(a);
+        console.log(a2);
+
+        //filter
+        var a3=a.filter(a=>a%2==0);
+        console.log(a3);
+
+
+        var arr=["Vaibhav","Rohit","Mahesh","Sohel"];
+        arr.sort();
+        console.log(arr);
+        arr.reverse();
+        console.log(arr);
+
+
+        function compareto(a,b)
+        {
+            console.log("in compare");
+            if(a<b)
+                return -1;
+            else if(a>b)
+                return +1;
+            else
+                return 0;
+        }
+
+        //number sort
+        var narr=[11,3,5,41,62,4,3];
+        narr.sort((a,b)=>a-b);
+        console.log(narr);
+
+        //foreach and for
+        narr.forEach(d=>console.log(d));
+        //or
+        for(var d of narr)
+        console.log(d);
+
+
+        //reduce()
+        var darr=[1,2,3,4,5];
+        var sum=darr.reduce((a,b)=>a+b);
+        console.log("Sum="+sum);
+
+        
+</script>
+</body>
+</html>
