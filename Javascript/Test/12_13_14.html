@@ -1,0 +1,55 @@
+Que 12-
+synchronous communication:- 
+        Synchronous communication happens in real time,
+        where at least two individuals are exchanging information, 
+        at the same time with each other. That’s not to say that you
+        need to be communicating in person for this to be deemed synchronous communication. 
+        This type of communication can be virtual as well, either scheduled or a little more impromptu. 
+
+Asynchronous communication:-
+        Asynchronous communication is communication that has a lag between when a message is sent
+        and when the person receiving it interprets it.This type of communication isn’t
+        generally conducted in person, nor is it planned for or scheduled. 
+
+Que 13:- What is promise
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+
+
+
+
+
+Que 14:Asynk and Await
+
+asynk:-In the above program, the async keyword is used before the function to represent that the function is asynchronous.
+ex: 
+// async function example
+async function f() {
+    console.log('Async function.');
+    return Promise.resolve(1);
+}
+f();
+
+
+
+
+
+Await:-The await keyword is used inside the async function to wait for the asynchronous operation.
+
+ex:
+// a promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+    resolve('Promise resolved')}, 4000); 
+});
+// async function
+async function asyncFunc() {
+
+    // wait until the promise resolves 
+    let result = await promise; 
+
+    console.log(result);
+    console.log('hello');
+}
+// calling the async function
+asyncFunc();

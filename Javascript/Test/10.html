@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator
+        function m3(a,b,c)
+        {
+            console.log("sum="+(a+b+c));
+        }
+        m3(1,2,3);
+
+        var myarray=[11,12,13];
+        m3(myarray[0],myarray[1],myarray[2]);
+        //myarray(...myarray);
+        /*
+            const arr = ['My', 'name', 'is', 'Vaibhav'];
+            document.write(arr);  
+            document.write(...arr);*/
+
+
+            
+        //rest operator
+        function m2(...a)
+        {
+            var sum=0;
+            for(var i=0;i<a.length;i++)
+                sum=sum+a[i];
+
+                alert("Summmmmmm="+sum);
+        }
+        m2(1,2,3,4,5,6,7,8,9);
+
+</script> 
+</body>
+</html>
