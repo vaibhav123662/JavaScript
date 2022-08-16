@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Teacher(tid,tname,qualification)
+        {
+            this.tid=tid;
+            this.tname=tname;
+            this.qualification=qualification;
+        }
+
+        Teacher.prototype.display=function()
+        {
+            console.log("Name:"+this.tname+"Qualification:"+this.qualification);
+        }
+
+        function VisitingTeacher(tid,tname,qualification,rate,hrs)
+        {
+            //this= visiting teacher
+            Teacher.call(this,tid,tname,qualification);
+            this.rate=rate;
+            this.hrs=hrs;
+        }
+
+        VisitingTeacher.prototype=new Teacher();
+        VisitingTeacher.prototype.constructor=VisitingTeacher;
+        var v1=new VisitingTeacher(1,"Vaibhav","MCS",1000,20);
+ 
+        v1.display();
+        console.log(v1);
+
+   </script>
+</body>
+</html>

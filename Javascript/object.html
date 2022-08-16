@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[];
+        var b={"sid":101,"sname":"Vaibhav","percent":90};
+        var c={"sid":102,"sname":"Rohit","percent":90};
+        console.log(b);
+        console.log(b.sid);
+        console.log(b.sname);
+        console.log(b.percent);
+        document.write(JSON.stringify(b));
+
+        console.log("sid:"+b["sid"]);
+        console.log("sname:"+b["sname"]);
+        console.log("percent:"+b["percent"]);
+
+        //to add the properties
+        b.city="pune";
+        b["Mobile"]=9604534856;
+        b["sname"]="Deepa";
+        console.log(b);
+        delete b.sname;
+        console.log(b);
+
+        var e1=
+        {"eid":1,
+        "ename":"Vaibhav",
+        "Mobile":[9604534856,9604777267],
+        "dept":{"dis":10,
+                "dname":"IT",
+               }
+        };
+        
+    </script>
+</body>
+</html>

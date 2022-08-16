@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //object creation by literal
+        var b={"sid":101,"sname":"Vaibhav","percent":90};
+
+
+        function student(sid,sname,per)
+        {
+            var ob={};
+            ob.rollno=sid;
+            ob.studentname=sname;
+            ob.percent=per;
+            return ob;
+        }
+        var ob1=student(1,"Vaibhav",90);
+        console.log(ob1);
+        //object creation by constructor
+        function stud(sid,snm,per)
+        {
+
+            this.rollno=sid;
+            this.studname=snm;
+            this.percent=per;
+            this.display=function()
+            {
+     console.log("rollno"+this.rollno+"Name:"+this.studname+"Percentage:"+this.percent);
+            }
+        }
+        var ob2=new stud(1,"Vaibhav",99);
+        //console.log(ob2);
+        ob2.display();
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
