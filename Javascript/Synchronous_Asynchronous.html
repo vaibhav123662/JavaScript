@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Asynchronous Functions -setTimeout & setInterval
+        function greet()
+        {
+            alert("Good Morning.........")
+        }
+        var timeid=setTimeout(greet,5000);
+        console.log("Welcome");
+        console.log("Sum="+(11*10));
+
+
+        var intervalid=setInterval(greet,3000);
+        console.log("After");
+
+        function Stop()
+        {
+            clearInterval(intervalid);
+        }
+        console.log("After");
+</script>
+</head>
+<body>
+    <button onclick="Stop()">Clear Interval</button>
+</body>
+</html>
