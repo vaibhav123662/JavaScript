@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //promise is a object which takes function and function take 2 parameters resolve and reject.
+        
+        function ServerCall(url)
+        {
+            return new Promise(function(resolve,reject)
+                {
+                    //server call logic
+                    var iserror=false;
+                    var data="";
+
+                    setTimeout(() => 
+                    {
+                        console.log("Time Up");
+                        if(!iserror)
+                            resolve({"id":101,"name":"Vaibhav","Age":23});
+                        else
+                            reject("Error Occured");
+                    }, 10000);
+                });
+        }
+
+        var promise=ServerCall("http://thinkq.com",101);
+        console.log(promise);
+
+        promise.then(d=>{
+            console.log(promise);
+            alert(JSON.stringify(d));
+        },err=>alert(err));
+
+    </script>
+</head>
+<body>
+
+    
+
+</body>
+</html>
